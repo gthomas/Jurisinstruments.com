@@ -3,9 +3,9 @@
 (function () {
   var CONFIG = {
     // Google Form "formResponse" URL, e.g. https://docs.google.com/forms/d/e/XXXX/formResponse
-    formAction: '',
+    formAction: 'https://docs.google.com/forms/d/e/1FAIpQLScy_N49OnKgM5HUVb5XowQopmh5ZXrisk8zXxP4oJ5xvW-1cg/formResponse',
     // entry.NNNN ids from the form's pre-filled link, one per field below
-    entries: { email: '', instrument: '', finish: '', fee: '', profession: '', heard: '', source: '' },
+    entries: { email: 'entry.823010872', instrument: 'entry.348580055', finish: 'entry.869707110', fee: 'entry.142267292', profession: 'entry.855771643', heard: 'entry.1441072151', source: 'entry.275536906' },
     // Cloudflare Web Analytics beacon token
     cfToken: '',
     mailto: 'info@jurisinstruments.com',
