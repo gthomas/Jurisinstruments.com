@@ -546,10 +546,10 @@ h1.cut{white-space:nowrap;font-size:clamp(80px,9.4vw,136px)}
     <div class="g8">
       <div class="s5">
         <p class="alloc">Units: none.</p>
-        <p style="margin-top:20px">None allocated. The application is pending. Requisitions are held on file until issue. Fee: to be determined. It has not been determined.</p>
+        <p style="margin-top:20px">None allocated. The application is pending. Entries are held on file until issue. Fee: to be determined. It has not been determined.</p>
         <div class="req">
           <span class="lab">Held on file until issue</span>
-          <a class="btn" href="../#requisition" style="display:inline-flex;align-items:center;text-decoration:none">Requisition</a>
+          <a class="btn" href="../#waitlist" style="display:inline-flex;align-items:center;text-decoration:none">Waitlist</a>
         </div>
       </div>
       <div class="s3">
@@ -1209,6 +1209,6 @@ function drawCallouts(){
 requestAnimationFrame(drawCallouts);
 const bootDraw = setInterval(() => { if (Object.keys(parts).length){ clearInterval(bootDraw); showFig(1, false); } }, 120);
 </script>
-<script src="../waitlist.js?v=6"></script>
+<script src="../waitlist.js?v=7"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* Juris waitlist: requisition form JPI-R-1, source attribution, analytics.
+/* Juris waitlist: waitlist form JPI-W-1, source attribution, analytics.
    Configure once the Google Form and Cloudflare site exist; until then the form falls back to email. */
 (function () {
   var CONFIG = {
@@ -43,7 +43,7 @@
   document.querySelectorAll('form[data-waitlist]').forEach(function (f) {
     if (CONFIG.notLive) {
       var n = document.createElement('div'); n.className = 'wl-notice';
-      n.innerHTML = '<b>Notice.</b> Form JPI-R-1 is not yet in service. Requisitions will open by ' + CONFIG.opensBy +
+      n.innerHTML = '<b>Notice.</b> Form JPI-W-1 is not yet in service. The waitlist will open by ' + CONFIG.opensBy +
         '. In the interim the Corporation may be reached on Instagram, <a href="https://www.instagram.com/' + CONFIG.instagram + '/" rel="noopener">@' + CONFIG.instagram + '</a>.';
       var hd = f.querySelector('.fh'); if (hd && hd.nextSibling) f.insertBefore(n, hd.nextSibling); else f.insertBefore(n, f.firstChild);
       var sb = f.querySelector('button[type=submit]'); if (sb) { sb.disabled = true; sb.textContent = 'Not yet in service'; }
@@ -51,7 +51,7 @@
       return;
     }
     var r = f.querySelector('.receipt'), e = f.querySelector('input[type=email]'), btn = f.querySelector('button[type=submit]');
-    if (entered()) { r.hidden = false; r.textContent = 'A requisition from this device is already on file. Another may be filed.'; }
+    if (entered()) { r.hidden = false; r.textContent = 'An entry from this device is already on file.'; }
     f.addEventListener('submit', function (ev) {
       ev.preventDefault();
       r.hidden = false;
@@ -61,8 +61,8 @@
       data.source = read('jpi_ref') || 'direct';
       if (!CONFIG.formAction) {
         var body = Object.keys(data).map(function (k) { return k + ': ' + data[k]; }).join('\n');
-        location.href = 'mailto:' + CONFIG.mailto + '?subject=' + encodeURIComponent('Requisition JPI-R-1') + '&body=' + encodeURIComponent(body);
-        r.textContent = 'Your mail program has been asked to file this requisition. Send the message to complete it.';
+        location.href = 'mailto:' + CONFIG.mailto + '?subject=' + encodeURIComponent('Waitlist entry JPI-W-1') + '&body=' + encodeURIComponent(body);
+        r.textContent = 'Your mail program has been asked to send this entry. Send the message to complete it.';
         return;
       }
       var p = new URLSearchParams();
@@ -71,11 +71,11 @@
       fetch(CONFIG.formAction, { method: 'POST', mode: 'no-cors', body: p })
         .then(function () {
           markEntered();
-          r.innerHTML = '<div style="width:220px;max-width:70%;margin:6px 0 14px;text-transform:none;letter-spacing:normal"><svg class="motto-lk" viewBox="0 0 148 64" role="img" aria-label="Juris Professional Instruments. Res ipsa non loquitur."><g transform="translate(0,0)"><clipPath id="rc-c"><path d="M10,0 H22 L32,10 V22 L22,32 H10 L0,22 V10 Z"/></clipPath><g fill="currentColor" clip-path="url(#rc-c)"><rect x="0" y="0" width="9" height="9"/><rect x="0" y="11" width="9" height="10"/><rect x="0" y="23" width="9" height="9"/><rect x="11" y="0" width="10" height="9"/><rect x="11" y="11" width="10" height="10"/><rect x="11" y="23" width="10" height="9"/><rect x="23" y="0" width="9" height="9"/><rect x="23" y="11" width="9" height="10"/><rect x="23" y="23" width="9" height="9"/></g></g><mask id="rc-m" maskUnits="userSpaceOnUse" x="40" y="-2" width="112" height="36"><rect x="40" y="-2" width="112" height="36" fill="#fff"/><rect x="40" y="9" width="112" height="2" fill="#000"/><rect x="40" y="21" width="112" height="2" fill="#000"/></mask><text x="44" y="32" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="45.71" textLength="104" lengthAdjust="spacing" fill="currentColor" mask="url(#rc-m)">JURIS</text><text x="44.4" y="44" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="500" font-size="8.57" letter-spacing=".6" fill="currentColor">PROFESSIONAL</text><text x="148" y="44" text-anchor="end" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="500" font-size="8.57" letter-spacing=".6" fill="currentColor">INSTRUMENTS</text><rect x="0" y="50" width="148" height="0.8" fill="currentColor"/><text x="44" y="61.5" text-anchor="start" font-family="Old Standard TT, Century Schoolbook, Georgia, serif" font-style="italic" font-size="10.5" fill="currentColor">Res ipsa non loquitur</text></svg></div>Requisition entered. You are on the waitlist in order of receipt. You will be written to when allocation opens. No payment has been taken.';
+          r.innerHTML = '<div style="width:220px;max-width:70%;margin:6px 0 14px;text-transform:none;letter-spacing:normal"><svg class="motto-lk" viewBox="0 0 148 64" role="img" aria-label="Juris Professional Instruments. Res ipsa non loquitur."><g transform="translate(0,0)"><clipPath id="rc-c"><path d="M10,0 H22 L32,10 V22 L22,32 H10 L0,22 V10 Z"/></clipPath><g fill="currentColor" clip-path="url(#rc-c)"><rect x="0" y="0" width="9" height="9"/><rect x="0" y="11" width="9" height="10"/><rect x="0" y="23" width="9" height="9"/><rect x="11" y="0" width="10" height="9"/><rect x="11" y="11" width="10" height="10"/><rect x="11" y="23" width="10" height="9"/><rect x="23" y="0" width="9" height="9"/><rect x="23" y="11" width="9" height="10"/><rect x="23" y="23" width="9" height="9"/></g></g><mask id="rc-m" maskUnits="userSpaceOnUse" x="40" y="-2" width="112" height="36"><rect x="40" y="-2" width="112" height="36" fill="#fff"/><rect x="40" y="9" width="112" height="2" fill="#000"/><rect x="40" y="21" width="112" height="2" fill="#000"/></mask><text x="44" y="32" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="45.71" textLength="104" lengthAdjust="spacing" fill="currentColor" mask="url(#rc-m)">JURIS</text><text x="44.4" y="44" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="500" font-size="8.57" letter-spacing=".6" fill="currentColor">PROFESSIONAL</text><text x="148" y="44" text-anchor="end" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="500" font-size="8.57" letter-spacing=".6" fill="currentColor">INSTRUMENTS</text><rect x="0" y="50" width="148" height="0.8" fill="currentColor"/><text x="44" y="61.5" text-anchor="start" font-family="Old Standard TT, Century Schoolbook, Georgia, serif" font-style="italic" font-size="10.5" fill="currentColor">Res ipsa non loquitur</text></svg></div>Entered. You are on the waitlist in order of receipt, and serial numbers follow that order. You will be written to when Allocation opens. No payment has been taken.';
           f.reset();
         })
         .catch(function () {
-          r.textContent = 'The requisition could not be filed. Write to ' + CONFIG.mailto + ' and it will be entered by hand.';
+          r.textContent = 'The entry could not be recorded. Write to ' + CONFIG.mailto + ' and it will be entered by hand.';
         })
         .then(function () { btn.disabled = false; });
     });
