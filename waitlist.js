@@ -10,7 +10,7 @@
     cfToken: '',
     mailto: 'info@jurisinstruments.com',
     // until the form is in service: show the notice and hold the submit button
-    notLive: true,
+    notLive: false,
     opensBy: 'Friday, 13 November 2026',
     instagram: 'jurisinstruments'
   };
