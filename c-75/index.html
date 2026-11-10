@@ -9,7 +9,7 @@
 <meta property="og:title" content="Juris C-75 “The Proxy” · Case file">
 <meta property="og:description" content="Chambered mahogany, bevelled top and back, TV Jones T-Armonds, shellac by hand. Made in Portland, Oregon. USD 2,500. Five this year.">
 <meta property="og:url" content="https://jurisinstruments.com/c-75/">
-<meta property="og:image" content="https://jurisinstruments.com/share-c75.png?v=5">
+<meta property="og:image" content="https://jurisinstruments.com/share-c75.png?v=6">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The Juris C-75 “The Proxy” prototype: black-dyed top, brass bridge, trapeze tailpiece. USD 2,500, five this year.">
 <meta name="twitter:card" content="summary_large_image">
@@ -167,6 +167,16 @@ h1{margin:2px 0 0;font-family:var(--f-letter);font-weight:600;font-size:clamp(96
 .keydata > div{padding:10px 0 12px}
 .keydata b{display:block;margin-top:2px;font-family:var(--f-letter);font-weight:500;font-size:28px;line-height:1.1;font-variant-numeric:tabular-nums}
 .keydata b em{font-style:normal;font-size:13px;letter-spacing:.08em;margin-left:3px;color:var(--ink-2)}
+.car{margin:0 0 6px}
+.car-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border:1px solid var(--rule);background:#FBFAF5}
+.car-track::-webkit-scrollbar{display:none}
+.car-track:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.car-slide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center}
+.car-slide img{width:100%;height:100%;object-fit:contain;display:block}
+.car-ctl{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.car-b{font:600 22px/1 var(--f-letter,'Barlow Condensed'),sans-serif;width:40px;height:34px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.car-b:disabled{opacity:.3;cursor:default}
+.car figcaption{display:flex;justify-content:space-between;gap:8px 20px;flex-wrap:wrap;margin-top:8px}
 .photo{margin:32px 0 0}
 .photo.top{margin:0 0 6px}
 .coverbuy{margin-top:30px;padding-top:16px;border-top:1.5px solid var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;max-width:400px}
@@ -330,9 +340,10 @@ h1.cut{white-space:nowrap}
           <p class="lab">Waitlist. No payment is taken. <a href="../exhibit-a/">Exhibit A</a></p></div>
       </div>
       <div class="s5 cover-r">
-        <figure class="photo top">
-          <img src="specimen.jpg" fetchpriority="high" width="1800" height="1200" alt="Black-and-white rendering of the C-75 at a three-quarter angle: bevelled geometric body, two pickups, bridge on a wooden base, trapeze tailpiece, two knobs and the neck running to a 3+3 headstock.">
-          <figcaption><span class="lab" style="color:var(--ink)">FIG. 0 · Representation</span><span class="lab">Rendered from the drawings. A photograph will be entered into the record. Until then, the drawings govern.</span></figcaption>
+        <figure class="car" aria-roledescription="carousel" aria-label="The C-75, photographed and rendered">
+          <div class="car-track" tabindex="0"><div class="car-slide" role="group" aria-roledescription="slide" aria-label="Plate 1 of 5: The prototype, as built" data-t="The prototype, as built" data-c="Photographed for the record. The headstock badge is a prototype."><img src="../photo/c75-prototype-hero.jpg?v=3" alt="The C-75 prototype on white paper, from the tailpiece end: black-dyed top under garnet shellac, brass bridge on a rosewood base, chrome trapeze tailpiece, amber knobs, the neck running away to the headstock." fetchpriority="high" width="1200" height="1500"></div><div class="car-slide" role="group" aria-roledescription="slide" aria-label="Plate 2 of 5: The prototype, at three-quarters" data-t="The prototype, at three-quarters" data-c="The edge has worn through where the forearm rests. This is expected."><img src="../photo/c75-prototype-three-quarter.jpg?v=3" alt="The C-75 prototype at three-quarters: the bevelled edge worn through to bare wood, mahogany sides, brass bridge, trapeze tailpiece." loading="lazy" width="1200" height="1500"></div><div class="car-slide" role="group" aria-roledescription="slide" aria-label="Plate 3 of 5: The prototype, from above" data-t="The prototype, from above" data-c="Side dots only. No face markers."><img src="../photo/c75-prototype-top.jpg?v=3" alt="The C-75 prototype from above: the full angular body, two pickups, bridge, tailpiece, and the fingerboard with no face markers." loading="lazy" width="1200" height="1500"></div><div class="car-slide" role="group" aria-roledescription="slide" aria-label="Plate 4 of 5: Rendered from the build model" data-t="Rendered from the build model" data-c="Black dye under garnet shellac."><img src="render-black.jpg?v=1" alt="A render of the C-75 standing upright from the build model: black-dyed top, mahogany sides, two pickups, brass bridge, trapeze tailpiece, 3+3 headstock with the Juris insignia." loading="lazy" width="1200" height="1500"></div><div class="car-slide" role="group" aria-roledescription="slide" aria-label="Plate 5 of 5: Representation" data-t="Representation" data-c="Rendered from the drawings, without colour. Where they differ, the drawings govern."><img src="specimen.jpg" alt="Black-and-white rendering of the C-75 at a three-quarter angle: bevelled geometric body, two pickups, bridge on a wooden base, trapeze tailpiece, two knobs and the neck running to a 3+3 headstock." loading="lazy" width="1200" height="1500"></div></div>
+          <div class="car-ctl"><button type="button" class="car-b car-prev" aria-label="Previous plate">‹</button><span class="lab car-n" aria-live="polite">Plate 1 of 5</span><button type="button" class="car-b car-next" aria-label="Next plate">›</button></div>
+          <figcaption><span class="lab car-t" style="color:var(--ink)">The prototype, as built</span><span class="lab car-c">Photographed for the record. The headstock badge is a prototype.</span></figcaption>
         </figure>
         <div>
           <div class="label">Abstract</div>
@@ -1252,5 +1263,13 @@ document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click'
 const bootCall = setInterval(() => { if (Object.keys(parts).length){ clearInterval(bootCall); setCallouts(1); } }, 120);
 </script>
 <script src="../waitlist.js?v=7"></script>
+<script>
+(()=>{document.querySelectorAll('.car').forEach(car=>{const tr=car.querySelector('.car-track'),sl=[...tr.children],n=car.querySelector('.car-n'),t=car.querySelector('.car-t'),c=car.querySelector('.car-c'),pv=car.querySelector('.car-prev'),nx=car.querySelector('.car-next');
+let cur=0;const show=i=>{cur=i;n.textContent='Plate '+(i+1)+' of '+sl.length;t.textContent=sl[i].dataset.t;c.textContent=sl[i].dataset.c;pv.disabled=i===0;nx.disabled=i===sl.length-1};
+const go=i=>{i=Math.max(0,Math.min(sl.length-1,i));show(i);tr.scrollTo({left:i*tr.clientWidth,behavior:'smooth'})};
+pv.onclick=()=>go(cur-1);nx.onclick=()=>go(cur+1);
+tr.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
+let tm;tr.addEventListener('scroll',()=>{clearTimeout(tm);tm=setTimeout(()=>{const i=Math.round(tr.scrollLeft/tr.clientWidth);if(i!==cur)show(i)},140)});show(0)})})();
+</script>
 </body>
 </html>
