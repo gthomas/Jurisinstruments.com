@@ -16,6 +16,8 @@ html{-webkit-text-size-adjust:100%}
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0}
 img{max-width:100%}
+.phx{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0 0}.phx img{width:100%;height:auto;display:block;border:1px solid var(--rule)}.phx figcaption{grid-column:1/-1;font-size:15px;color:var(--ink-2)}
+@media (max-width:700px){.phx{grid-template-columns:1fr}}
 
 /* Shared Juris sheet system. Layout: drawing sheets on a gridded table; inside each sheet an 8-column grid whose
    column starts are the zone ticks along the top edge. Type in three steps: sheet title, body, label. */
@@ -277,8 +279,14 @@ mark.tbd::before{content:"▢ ";opacity:.6}
     </div>
     <div class="g8" style="margin-top:30px">
       <dl class="kv s4"><dt>Made</dt><dd>By hands and machines in Portland, Oregon</dd><dt>Builder of record</dt><dd>Grant Thomas</dd><dt>Correspondence</dt><dd><a href="mailto:info@jurisinstruments.com">info@jurisinstruments.com</a> · <a href="https://www.instagram.com/juris_instruments/" rel="noopener">@juris_instruments</a> · answered by the builder, by name</dd></dl>
-      <dl class="kv s4"><dt>Instruments</dt><dd>C-75 (waitlist open) · C-75A, C-75T (drawn, not yet built)</dd><dt>Before you commit</dt><dd>Photographs and recordings of the C-75 will be entered into the record here.</dd></dl>
+      <dl class="kv s4"><dt>Instruments</dt><dd>C-75 (waitlist open) · C-75A, C-75T (drawn, not yet built)</dd><dt>Before you commit</dt><dd>Photographs of the prototype are below. Recordings will be entered into the record here.</dd></dl>
     </div>
+    <figure class="phx">
+      <img src="../photo/c75-prototype-hero.jpg?v=1" width="1200" height="1500" loading="lazy" alt="The C-75 prototype from the tailpiece end: black-dyed top, brass bridge, trapeze tailpiece, amber knobs, the neck running away.">
+      <img src="../photo/c75-prototype-three-quarter.jpg?v=1" width="1200" height="1500" loading="lazy" alt="The C-75 prototype at three-quarters: the bevelled edge worn through to bare wood where the arm rests, mahogany sides.">
+      <img src="../photo/c75-prototype-top.jpg?v=1" width="1200" height="1500" loading="lazy" alt="The C-75 prototype from above: the full angular body, two pickups, bridge, tailpiece and the fingerboard with side dots only.">
+      <figcaption>The prototype, as built: black dye under garnet shellac. The headstock badge is a prototype and does not match the production design. The edge wear is real.</figcaption>
+    </figure>
   </div>
   <div class="cont"><span>Exhibit</span>A <span>Sheet</span>1 of 3</div>
 </section>
