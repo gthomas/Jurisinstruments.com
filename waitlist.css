@@ -22,3 +22,8 @@ form.wl{border:1.5px solid var(--ink);background:var(--paper)}
 .wl .wl-notice{border-bottom:1.5px solid var(--ink);padding:12px 14px;background:var(--ink);color:var(--paper);font-size:15px;line-height:1.45}
 .wl .wl-notice b{font-family:var(--f-letter);letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-right:6px}
 .wl .wl-notice a{color:var(--paper);text-decoration:underline}
+
+.wl .ap-no{margin-top:10px;font-family:var(--f-data);text-transform:none;letter-spacing:0;font-size:15px}.wl .ap-no b{font-weight:600}
+.wl .ap-card canvas{display:block;width:100%;max-width:240px;height:auto;margin:12px 0;border:1px solid var(--ink)}
+.wl .ap-act{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.wl .ap-save{cursor:pointer;text-decoration:underline}
+.wl .ap-hint{margin-top:10px;text-transform:none;letter-spacing:0;font-family:var(--f-text);font-size:14px;color:var(--ink-2)}
