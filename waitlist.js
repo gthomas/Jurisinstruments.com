@@ -64,7 +64,7 @@
     function wrap(t, x, y, maxw, lh, font, col) { g.font = font; g.fillStyle = col || INK; g.textAlign = 'left'; var words = t.split(' '), line = ''; for (var i = 0; i < words.length; i++) { var tst = line ? line + ' ' + words[i] : words[i]; if (g.measureText(tst).width > maxw && line) { g.fillText(line, x, y); y += lh; line = words[i]; } else line = tst; } g.fillText(line, x, y); return y + lh; }
     // insignia: nine-patch octagon
     function insignia(cx, cy, s) { g.save(); g.translate(cx - s / 2, cy - s / 2); g.scale(s / 32, s / 32); g.beginPath(); g.moveTo(10, 0); g.lineTo(22, 0); g.lineTo(32, 10); g.lineTo(32, 22); g.lineTo(22, 32); g.lineTo(10, 32); g.lineTo(0, 22); g.lineTo(0, 10); g.closePath(); g.clip(); g.fillStyle = INK; [[0, 9], [11, 10], [23, 9]].forEach(function (a) { [[0, 9], [11, 10], [23, 9]].forEach(function (b) { g.fillRect(a[0], b[0], a[1], b[1]); }); }); g.restore(); }
-    insignia(L + 22, 141, 44); lab('Juris Professional Instruments', L + 66, 150); lab('Form JPI-A-1', R, 150, INK2, 'right'); rule(180);
+    insignia(L + 22, 141, 44); lab('Juris Professional Instruments', L + 66, 150); lab('Form JPI-W-1', R, 150, INK2, 'right'); rule(180);
     lab('Notice of Appearance', L, 300, INK2);
     g.font = '700 168px "Barlow Condensed", "Arial Narrow", sans-serif'; g.fillStyle = INK; g.textAlign = 'left';
     g.fillText('ENTERED.', L, 470);
