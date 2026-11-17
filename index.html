@@ -303,6 +303,7 @@ form.req{border:1.5px solid var(--ink)}
         <form class="wl" id="join-form" data-waitlist data-kind="appearance" novalidate>
           <div class="fh"><span class="lab" style="color:var(--ink)">Join the waitlist · Free</span><span class="lab">Form JPI-W-1</span></div>
           <div class="field"><span class="bx">1</span><div><label class="lab" for="j-email">Email address</label><input id="j-email" name="email" type="email" autocomplete="email" placeholder="name@domain" required></div></div>
+          <div class="field"><span class="bx">2</span><div><label class="lab" for="j-inst">Instrument</label><select id="j-inst" name="instrument"><option value="C-75 “The Proxy”" selected>C-75 “The Proxy” · issued</option><option value="C-75A “The Amicus”, when issued">C-75A “The Amicus” · archtop, in drafting</option><option value="C-75T, when issued">C-75T “The Precedent” · T-style, in drafting</option><option value="Undetermined">Undecided</option></select></div></div>
           <div class="actions"><span class="lab">Nothing is owed.</span><button class="btn" type="submit">Join the waitlist</button></div>
           <div class="receipt" role="status" hidden></div>
         </form>
@@ -422,6 +423,7 @@ form.req{border:1.5px solid var(--ink)}
       <div class="s5"><form class="wl" data-waitlist data-kind="appearance" novalidate>
         <div class="fh"><span class="lab" style="color:var(--ink)">Join the waitlist · Free</span><span class="lab">Form JPI-W-1</span></div>
         <div class="field"><span class="bx">1</span><div><label class="lab" for="a-email">Email address</label><input id="a-email" name="email" type="email" autocomplete="email" placeholder="name@domain" required></div></div>
+          <div class="field"><span class="bx">2</span><div><label class="lab" for="a-inst">Instrument</label><select id="a-inst" name="instrument"><option value="C-75 “The Proxy”" selected>C-75 “The Proxy” · issued</option><option value="C-75A “The Amicus”, when issued">C-75A “The Amicus” · archtop, in drafting</option><option value="C-75T, when issued">C-75T “The Precedent” · T-style, in drafting</option><option value="Undetermined">Undecided</option></select></div></div>
         <div class="actions"><span class="lab">By entering an address, the undersigned accepts service.</span><button class="btn" type="submit">Join the waitlist</button></div>
         <div class="receipt" role="status" hidden></div>
       </form></div>
@@ -460,6 +462,6 @@ var vis=0;new IntersectionObserver(function(es){es.forEach(function(e){vis=e.isI
 ;st.classList.toggle('off',!!vis)},{threshold:.2}).observe(f);
 document.querySelectorAll('form[data-waitlist]').forEach(function(x){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)st.classList.add('off');else if(!vis)st.classList.remove('off')})}).observe(x)});
 st.addEventListener('click',function(e){e.preventDefault();f.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){var i=document.getElementById('j-email');if(i)i.focus({preventScroll:true})},450)});})();</script>
-<script src="waitlist.js?v=10"></script>
+<script src="waitlist.js?v=11"></script>
 </body>
 </html>

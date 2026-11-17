@@ -577,6 +577,7 @@ h1.cut{white-space:nowrap}
         <div style="margin-top:18px"><form class="wl" data-waitlist data-kind="appearance" novalidate>
         <div class="fh"><span class="lab" style="color:var(--ink)">Join the waitlist · Free</span><span class="lab">Form JPI-W-1</span></div>
         <div class="field"><span class="bx">1</span><div><label class="lab" for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email" placeholder="name@domain" required></div></div>
+          <div class="field"><span class="bx">2</span><div><label class="lab" for="c-inst">Instrument</label><select id="c-inst" name="instrument"><option value="C-75 “The Proxy”" selected>C-75 “The Proxy” · issued</option><option value="C-75A “The Amicus”, when issued">C-75A “The Amicus” · archtop, in drafting</option><option value="C-75T, when issued">C-75T “The Precedent” · T-style, in drafting</option><option value="Undetermined">Undecided</option></select></div></div>
         <div class="actions"><span class="lab">Nothing is owed.</span><button class="btn" type="submit">Join the waitlist</button></div>
         <div class="receipt" role="status" hidden></div>
       </form></div>
@@ -1258,7 +1259,7 @@ document.querySelectorAll('[data-fig]').forEach(b => b.addEventListener('click',
 document.querySelectorAll('[data-view]').forEach(b => b.addEventListener('click', () => setCallouts(0)));
 const bootCall = setInterval(() => { if (Object.keys(parts).length){ clearInterval(bootCall); setCallouts(1); } }, 120);
 </script>
-<script src="../waitlist.js?v=9"></script>
+<script src="../waitlist.js?v=11"></script>
 <script>
 (()=>{document.querySelectorAll('.car').forEach(car=>{const tr=car.querySelector('.car-track'),sl=[...tr.children],n=car.querySelector('.car-n'),t=car.querySelector('.car-t'),c=car.querySelector('.car-c'),pv=car.querySelector('.car-prev'),nx=car.querySelector('.car-next');
 let cur=0;const show=i=>{cur=i;n.textContent='Plate '+(i+1)+' of '+sl.length;t.textContent=sl[i].dataset.t;c.textContent=sl[i].dataset.c;pv.disabled=i===0;nx.disabled=i===sl.length-1};

@@ -104,6 +104,9 @@
   }
 
   // ---- forms
+  (function(){ var i=null; try{ i=new URLSearchParams(location.search).get('i'); }catch(e){}
+    var map={c75a:'C-75A “The Amicus”, when issued',c75t:'C-75T, when issued',c75:'C-75 “The Proxy”'};
+    if(i&&map[i]) document.querySelectorAll('form[data-waitlist] select[name=instrument]').forEach(function(x){x.value=map[i];}); })();
   document.querySelectorAll('form[data-waitlist]').forEach(function (f) {
     if (CONFIG.notLive) {
       var n = document.createElement('div'); n.className = 'wl-notice';
@@ -127,7 +130,7 @@
       var kind = f.getAttribute('data-kind') || 'allocation';
       if (kind === 'appearance') {
         var no = appearanceNo();
-        data.instrument = 'Undetermined'; data.finish = 'Undecided'; data.fee = 'Observe only';
+        data.instrument = data.instrument || 'C-75 “The Proxy”'; data.finish = 'Undecided'; data.fee = 'Observe only';
         data.profession = ''; data.heard = 'Not stated';
         data.source = 'appearance ' + no + ' / ' + data.source;
       }
